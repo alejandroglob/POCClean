@@ -8,12 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		700AE7BC1F0D33A8001B8D7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700AE7BB1F0D33A8001B8D7C /* AppDelegate.swift */; };
-		700AE7BE1F0D33A8001B8D7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700AE7BD1F0D33A8001B8D7C /* ViewController.swift */; };
 		700AE7C11F0D33A8001B8D7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 700AE7BF1F0D33A8001B8D7C /* Main.storyboard */; };
 		700AE7C31F0D33A8001B8D7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 700AE7C21F0D33A8001B8D7C /* Assets.xcassets */; };
 		700AE7C61F0D33A8001B8D7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 700AE7C41F0D33A8001B8D7C /* LaunchScreen.storyboard */; };
 		700AE7D11F0D33A8001B8D7C /* POCCleanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700AE7D01F0D33A8001B8D7C /* POCCleanTests.swift */; };
 		700AE7DC1F0D33A8001B8D7C /* POCCleanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700AE7DB1F0D33A8001B8D7C /* POCCleanUITests.swift */; };
+		700AE7EF1F0D33CE001B8D7C /* CreateUserInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700AE7E91F0D33CE001B8D7C /* CreateUserInteractor.swift */; };
+		700AE7F01F0D33CE001B8D7C /* CreateUserModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700AE7EA1F0D33CE001B8D7C /* CreateUserModels.swift */; };
+		700AE7F11F0D33CE001B8D7C /* CreateUserPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700AE7EB1F0D33CE001B8D7C /* CreateUserPresenter.swift */; };
+		700AE7F21F0D33CE001B8D7C /* CreateUserRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700AE7EC1F0D33CE001B8D7C /* CreateUserRouter.swift */; };
+		700AE7F31F0D33CE001B8D7C /* CreateUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700AE7ED1F0D33CE001B8D7C /* CreateUserViewController.swift */; };
+		700AE7F41F0D33CE001B8D7C /* CreateUserWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700AE7EE1F0D33CE001B8D7C /* CreateUserWorker.swift */; };
+		700AE7FA1F0D3EEF001B8D7C /* CreateUserInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700AE7F61F0D3EEF001B8D7C /* CreateUserInteractorTests.swift */; };
+		700AE7FB1F0D3EEF001B8D7C /* CreateUserPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700AE7F71F0D3EEF001B8D7C /* CreateUserPresenterTests.swift */; };
+		700AE7FC1F0D3EEF001B8D7C /* CreateUserViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700AE7F81F0D3EEF001B8D7C /* CreateUserViewControllerTests.swift */; };
+		700AE7FD1F0D3EEF001B8D7C /* CreateUserWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700AE7F91F0D3EEF001B8D7C /* CreateUserWorkerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +45,6 @@
 /* Begin PBXFileReference section */
 		700AE7B81F0D33A8001B8D7C /* POCClean.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = POCClean.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		700AE7BB1F0D33A8001B8D7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		700AE7BD1F0D33A8001B8D7C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		700AE7C01F0D33A8001B8D7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		700AE7C21F0D33A8001B8D7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		700AE7C51F0D33A8001B8D7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +55,16 @@
 		700AE7D71F0D33A8001B8D7C /* POCCleanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = POCCleanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		700AE7DB1F0D33A8001B8D7C /* POCCleanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POCCleanUITests.swift; sourceTree = "<group>"; };
 		700AE7DD1F0D33A8001B8D7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		700AE7E91F0D33CE001B8D7C /* CreateUserInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUserInteractor.swift; sourceTree = "<group>"; };
+		700AE7EA1F0D33CE001B8D7C /* CreateUserModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUserModels.swift; sourceTree = "<group>"; };
+		700AE7EB1F0D33CE001B8D7C /* CreateUserPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUserPresenter.swift; sourceTree = "<group>"; };
+		700AE7EC1F0D33CE001B8D7C /* CreateUserRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUserRouter.swift; sourceTree = "<group>"; };
+		700AE7ED1F0D33CE001B8D7C /* CreateUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUserViewController.swift; sourceTree = "<group>"; };
+		700AE7EE1F0D33CE001B8D7C /* CreateUserWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUserWorker.swift; sourceTree = "<group>"; };
+		700AE7F61F0D3EEF001B8D7C /* CreateUserInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUserInteractorTests.swift; sourceTree = "<group>"; };
+		700AE7F71F0D3EEF001B8D7C /* CreateUserPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUserPresenterTests.swift; sourceTree = "<group>"; };
+		700AE7F81F0D3EEF001B8D7C /* CreateUserViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUserViewControllerTests.swift; sourceTree = "<group>"; };
+		700AE7F91F0D3EEF001B8D7C /* CreateUserWorkerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUserWorkerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +115,8 @@
 		700AE7BA1F0D33A8001B8D7C /* POCClean */ = {
 			isa = PBXGroup;
 			children = (
+				700AE7F51F0D33DD001B8D7C /* Create User */,
 				700AE7BB1F0D33A8001B8D7C /* AppDelegate.swift */,
-				700AE7BD1F0D33A8001B8D7C /* ViewController.swift */,
 				700AE7BF1F0D33A8001B8D7C /* Main.storyboard */,
 				700AE7C21F0D33A8001B8D7C /* Assets.xcassets */,
 				700AE7C41F0D33A8001B8D7C /* LaunchScreen.storyboard */,
@@ -112,6 +130,7 @@
 			children = (
 				700AE7D01F0D33A8001B8D7C /* POCCleanTests.swift */,
 				700AE7D21F0D33A8001B8D7C /* Info.plist */,
+				700AE7FE1F0D3EFD001B8D7C /* CreateUser */,
 			);
 			path = POCCleanTests;
 			sourceTree = "<group>";
@@ -123,6 +142,30 @@
 				700AE7DD1F0D33A8001B8D7C /* Info.plist */,
 			);
 			path = POCCleanUITests;
+			sourceTree = "<group>";
+		};
+		700AE7F51F0D33DD001B8D7C /* Create User */ = {
+			isa = PBXGroup;
+			children = (
+				700AE7E91F0D33CE001B8D7C /* CreateUserInteractor.swift */,
+				700AE7EA1F0D33CE001B8D7C /* CreateUserModels.swift */,
+				700AE7EB1F0D33CE001B8D7C /* CreateUserPresenter.swift */,
+				700AE7EC1F0D33CE001B8D7C /* CreateUserRouter.swift */,
+				700AE7ED1F0D33CE001B8D7C /* CreateUserViewController.swift */,
+				700AE7EE1F0D33CE001B8D7C /* CreateUserWorker.swift */,
+			);
+			name = "Create User";
+			sourceTree = "<group>";
+		};
+		700AE7FE1F0D3EFD001B8D7C /* CreateUser */ = {
+			isa = PBXGroup;
+			children = (
+				700AE7F61F0D3EEF001B8D7C /* CreateUserInteractorTests.swift */,
+				700AE7F71F0D3EEF001B8D7C /* CreateUserPresenterTests.swift */,
+				700AE7F81F0D3EEF001B8D7C /* CreateUserViewControllerTests.swift */,
+				700AE7F91F0D3EEF001B8D7C /* CreateUserWorkerTests.swift */,
+			);
+			name = CreateUser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +302,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				700AE7BE1F0D33A8001B8D7C /* ViewController.swift in Sources */,
+				700AE7F01F0D33CE001B8D7C /* CreateUserModels.swift in Sources */,
+				700AE7F21F0D33CE001B8D7C /* CreateUserRouter.swift in Sources */,
+				700AE7F31F0D33CE001B8D7C /* CreateUserViewController.swift in Sources */,
 				700AE7BC1F0D33A8001B8D7C /* AppDelegate.swift in Sources */,
+				700AE7EF1F0D33CE001B8D7C /* CreateUserInteractor.swift in Sources */,
+				700AE7F41F0D33CE001B8D7C /* CreateUserWorker.swift in Sources */,
+				700AE7F11F0D33CE001B8D7C /* CreateUserPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +316,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				700AE7FB1F0D3EEF001B8D7C /* CreateUserPresenterTests.swift in Sources */,
 				700AE7D11F0D33A8001B8D7C /* POCCleanTests.swift in Sources */,
+				700AE7FA1F0D3EEF001B8D7C /* CreateUserInteractorTests.swift in Sources */,
+				700AE7FC1F0D3EEF001B8D7C /* CreateUserViewControllerTests.swift in Sources */,
+				700AE7FD1F0D3EEF001B8D7C /* CreateUserWorkerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
