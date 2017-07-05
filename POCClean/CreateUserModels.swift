@@ -28,4 +28,14 @@ enum CreateUser
     {
     }
   }
+    
+    enum User {
+        struct Request {
+            var firstName:String
+            var lastName:String
+        }
+        struct Response {
+            var success:String
+        }
+    }
 }

@@ -93,6 +93,7 @@ class CreateUserViewController: UIViewController, CreateUserDisplayLogic
         //nameTextField.text = viewModel.name
     }
     @IBAction func didPressSave(_ sender: Any) {
-        interactor?.saveUser()
+        let request = CreateUser.User.Request(firstName: txtFirstName.text!, lastName: txtLastName.text!)
+        interactor?.saveUser(request: request)
     }
 }

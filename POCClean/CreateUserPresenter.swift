@@ -14,18 +14,26 @@ import UIKit
 
 protocol CreateUserPresentationLogic
 {
-  func presentSomething(response: CreateUser.Something.Response)
+    
+    
+    func presentCreateUser(response: CreateUser.User.Response)
+    
 }
 
 class CreateUserPresenter: CreateUserPresentationLogic
 {
-  weak var viewController: CreateUserDisplayLogic?
-  
-  // MARK: Do something
-  
-  func presentSomething(response: CreateUser.Something.Response)
-  {
-    let viewModel = CreateUser.Something.ViewModel()
-    viewController?.displaySomething(viewModel: viewModel)
-  }
+    weak var viewController: CreateUserDisplayLogic?
+    
+    // MARK: Do something
+    
+//    func presentSomething(response: CreateUser.Something.Response)
+//    {
+//        let viewModel = CreateUser.Something.ViewModel()
+//        viewController?.displaySomething(viewModel: viewModel)
+//    }
+    
+    func presentCreateUser(response: CreateUser.User.Response) {
+        
+    }
+    
 }

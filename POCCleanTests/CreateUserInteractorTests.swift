@@ -15,40 +15,56 @@ import XCTest
 
 class CreateUserInteractorTests: XCTestCase
 {
-  // MARK: Subject under test
-  
-  var sut: CreateUserInteractor!
-  
-  // MARK: Test lifecycle
-  
-  override func setUp()
-  {
-    super.setUp()
-    setupCreateUserInteractor()
-  }
-  
-  override func tearDown()
-  {
-    super.tearDown()
-  }
-  
-  // MARK: Test setup
-  
-  func setupCreateUserInteractor()
-  {
-    sut = CreateUserInteractor()
-  }
-  
-  // MARK: Test doubles
-  
-  // MARK: Tests
-  
-  func testSomething()
-  {
-    // Given
+    // MARK: Subject under test
     
-    // When
+    var sut: CreateUserInteractor!
     
-    // Then
-  }
+    // MARK: Test lifecycle
+    
+    override func setUp()
+    {
+        super.setUp()
+        setupCreateUserInteractor()
+    }
+    
+    override func tearDown()
+    {
+        super.tearDown()
+    }
+    
+    // MARK: Test setup
+    
+    func setupCreateUserInteractor()
+    {
+        sut = CreateUserInteractor()
+    }
+    
+    // MARK: Test doubles
+    
+    // MARK: Tests
+    
+    
+    func testInteractorCallsPresenter(){
+        
+        //Given 
+        let spy = PresenterSpy()
+        sut.presenter = spy
+        
+        // When
+        let request = CreateUser.User.Request(firstName: "Alejandro", lastName: "Rodríguez")
+        sut.saveUser(request: request)
+        
+        //Then 
+        XCTAssertTrue(spy.presentUserWasCalled, "Present create user should be called")
+    }
+}
+
+class PresenterSpy: CreateUserPresentationLogic{
+    
+    
+    var presentUserWasCalled = false
+    
+    func presentCreateUser(response: CreateUser.User.Response) {
+        presentUserWasCalled = true
+    }
 }

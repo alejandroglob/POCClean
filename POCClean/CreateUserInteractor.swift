@@ -15,7 +15,7 @@ import UIKit
 protocol CreateUserBusinessLogic
 {
     
-    func saveUser()
+    func saveUser(request: CreateUser.User.Request)
 }
 
 protocol CreateUserDataStore
@@ -40,5 +40,9 @@ class CreateUserInteractor: CreateUserBusinessLogic, CreateUserDataStore
 //        presenter?.presentSomething(response: response)
 //    }
     
-    func saveUser() {}
+    func saveUser(request: CreateUser.User.Request) {
+        
+        let response = CreateUser.User.Response(success: "success")
+        presenter?.presentCreateUser(response: response)
+    }
 }

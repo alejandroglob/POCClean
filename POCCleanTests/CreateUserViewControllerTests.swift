@@ -61,6 +61,9 @@ class CreateUserViewControllerTests: XCTestCase
         sut.interactor = spy
         
         //When
+        loadView()
+        sut.txtLastName.text = "Alejandro"
+        sut.txtLastName.text = "Rodriguez"
         //Button is tapped
         sut.didPressSave(self)
         
@@ -75,8 +78,7 @@ class InteractorSpy:CreateUserBusinessLogic{
     
     var saveUserWasCalled = false
     
-    func saveUser() {
+    func saveUser(request: CreateUser.User.Request) {
         saveUserWasCalled = true
     }
-    
 }

@@ -15,40 +15,40 @@ import XCTest
 
 class CreateUserPresenterTests: XCTestCase
 {
-  // MARK: Subject under test
-  
-  var sut: CreateUserPresenter!
-  
-  // MARK: Test lifecycle
-  
-  override func setUp()
-  {
-    super.setUp()
-    setupCreateUserPresenter()
-  }
-  
-  override func tearDown()
-  {
-    super.tearDown()
-  }
-  
-  // MARK: Test setup
-  
-  func setupCreateUserPresenter()
-  {
-    sut = CreateUserPresenter()
-  }
-  
-  // MARK: Test doubles
-  
-  // MARK: Tests
-  
-  func testSomething()
-  {
-    // Given
+    // MARK: Subject under test
     
-    // When
+    var sut: CreateUserPresenter!
     
-    // Then
-  }
+    // MARK: Test lifecycle
+    
+    override func setUp()
+    {
+        super.setUp()
+        setupCreateUserPresenter()
+    }
+    
+    override func tearDown()
+    {
+        super.tearDown()
+    }
+    
+    // MARK: Test setup
+    
+    func setupCreateUserPresenter()
+    {
+        sut = CreateUserPresenter()
+    }
+    
+    // MARK: Test doubles
+    
+    // MARK: Tests
+    
+    func testSomething()
+    {
+        // Given
+        
+        // When
+        
+        // Then
+    }
 }
