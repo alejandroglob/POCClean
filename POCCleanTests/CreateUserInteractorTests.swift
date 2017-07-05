@@ -57,6 +57,34 @@ class CreateUserInteractorTests: XCTestCase
         //Then 
         XCTAssertTrue(spy.presentUserWasCalled, "Present create user should be called")
     }
+    
+    func testInteractorShouldCallWorkerToSaveUser(){
+        
+        //Given
+        let spy = WorkerSpy(store: UsersMemStore())
+        sut.worker = spy
+        
+        // When
+        let request = CreateUser.User.Request(firstName: "Alejandro", lastName: "Rodríguez")
+        sut.saveUser(request: request)
+        
+        XCTAssertTrue(spy.workerWasCalled, "Worker should have been called")
+        
+        
+    }
+}
+
+class WorkerSpy:CreateUserWorker{
+    
+    var workerWasCalled = false
+    
+    
+    
+    override func saveUser(request: CreateUser.User.Request, completionHandler: (String) -> Void) {
+         workerWasCalled = true
+    }
+    
+    
 }
 
 class PresenterSpy: CreateUserPresentationLogic{

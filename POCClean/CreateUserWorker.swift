@@ -12,9 +12,25 @@
 
 import UIKit
 
+protocol UsersStoreProtocol {
+    
+    func saveUser(request: CreateUser.User.Request, completionHandler: (_ success: String) -> Void)
+}
+
+
 class CreateUserWorker
 {
-  func doSomeWork()
-  {
-  }
+    var usersStore:UsersStoreProtocol
+    
+    init(store: UsersStoreProtocol) {
+        usersStore = store
+    }
+    
+    
+    func saveUser(request: CreateUser.User.Request, completionHandler: (_ success: String) -> Void){
+        usersStore.saveUser(request: request) { (success) in
+            completionHandler("Success")
+        }
+    }
+    
 }

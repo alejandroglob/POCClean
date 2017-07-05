@@ -26,7 +26,7 @@ protocol CreateUserDataStore
 class CreateUserInteractor: CreateUserBusinessLogic, CreateUserDataStore
 {
     var presenter: CreateUserPresentationLogic?
-    var worker: CreateUserWorker?
+    var worker: CreateUserWorker = CreateUserWorker(store: UsersMemStore())
     //var name: String = ""
     
     // MARK: Do something
@@ -42,7 +42,11 @@ class CreateUserInteractor: CreateUserBusinessLogic, CreateUserDataStore
     
     func saveUser(request: CreateUser.User.Request) {
         
-        let response = CreateUser.User.Response(success: "success")
-        presenter?.presentCreateUser(response: response)
+        worker.saveUser(request: request) { (success) in
+            let response = CreateUser.User.Response(success: "success")
+            presenter?.presentCreateUser(response: response)
+        }
+        
+        
     }
 }

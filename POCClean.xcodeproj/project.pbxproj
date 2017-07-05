@@ -23,6 +23,8 @@
 		700AE7FB1F0D3EEF001B8D7C /* CreateUserPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700AE7F71F0D3EEF001B8D7C /* CreateUserPresenterTests.swift */; };
 		700AE7FC1F0D3EEF001B8D7C /* CreateUserViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700AE7F81F0D3EEF001B8D7C /* CreateUserViewControllerTests.swift */; };
 		700AE7FD1F0D3EEF001B8D7C /* CreateUserWorkerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700AE7F91F0D3EEF001B8D7C /* CreateUserWorkerTests.swift */; };
+		700AE8001F0D7834001B8D7C /* UsersMemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700AE7FF1F0D7834001B8D7C /* UsersMemStore.swift */; };
+		700AE8041F0D8006001B8D7C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700AE8031F0D8006001B8D7C /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		700AE7F71F0D3EEF001B8D7C /* CreateUserPresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUserPresenterTests.swift; sourceTree = "<group>"; };
 		700AE7F81F0D3EEF001B8D7C /* CreateUserViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUserViewControllerTests.swift; sourceTree = "<group>"; };
 		700AE7F91F0D3EEF001B8D7C /* CreateUserWorkerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUserWorkerTests.swift; sourceTree = "<group>"; };
+		700AE7FF1F0D7834001B8D7C /* UsersMemStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersMemStore.swift; sourceTree = "<group>"; };
+		700AE8031F0D8006001B8D7C /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,12 +119,14 @@
 		700AE7BA1F0D33A8001B8D7C /* POCClean */ = {
 			isa = PBXGroup;
 			children = (
-				700AE7F51F0D33DD001B8D7C /* Create User */,
+				700AE8011F0D7B9F001B8D7C /* Services */,
+				700AE8021F0D7BAD001B8D7C /* Scenes */,
 				700AE7BB1F0D33A8001B8D7C /* AppDelegate.swift */,
 				700AE7BF1F0D33A8001B8D7C /* Main.storyboard */,
 				700AE7C21F0D33A8001B8D7C /* Assets.xcassets */,
 				700AE7C41F0D33A8001B8D7C /* LaunchScreen.storyboard */,
 				700AE7C71F0D33A8001B8D7C /* Info.plist */,
+				700AE8031F0D8006001B8D7C /* User.swift */,
 			);
 			path = POCClean;
 			sourceTree = "<group>";
@@ -166,6 +172,22 @@
 				700AE7F91F0D3EEF001B8D7C /* CreateUserWorkerTests.swift */,
 			);
 			name = CreateUser;
+			sourceTree = "<group>";
+		};
+		700AE8011F0D7B9F001B8D7C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				700AE7FF1F0D7834001B8D7C /* UsersMemStore.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		700AE8021F0D7BAD001B8D7C /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				700AE7F51F0D33DD001B8D7C /* Create User */,
+			);
+			name = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,6 +328,8 @@
 				700AE7F21F0D33CE001B8D7C /* CreateUserRouter.swift in Sources */,
 				700AE7F31F0D33CE001B8D7C /* CreateUserViewController.swift in Sources */,
 				700AE7BC1F0D33A8001B8D7C /* AppDelegate.swift in Sources */,
+				700AE8001F0D7834001B8D7C /* UsersMemStore.swift in Sources */,
+				700AE8041F0D8006001B8D7C /* User.swift in Sources */,
 				700AE7EF1F0D33CE001B8D7C /* CreateUserInteractor.swift in Sources */,
 				700AE7F41F0D33CE001B8D7C /* CreateUserWorker.swift in Sources */,
 				700AE7F11F0D33CE001B8D7C /* CreateUserPresenter.swift in Sources */,
@@ -557,6 +581,7 @@
 				700AE7E21F0D33A8001B8D7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		700AE7E31F0D33A8001B8D7C /* Build configuration list for PBXNativeTarget "POCCleanTests" */ = {
 			isa = XCConfigurationList;
@@ -565,6 +590,7 @@
 				700AE7E51F0D33A8001B8D7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		700AE7E61F0D33A8001B8D7C /* Build configuration list for PBXNativeTarget "POCCleanUITests" */ = {
 			isa = XCConfigurationList;
@@ -573,6 +599,7 @@
 				700AE7E81F0D33A8001B8D7C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
