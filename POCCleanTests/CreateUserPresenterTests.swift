@@ -43,12 +43,27 @@ class CreateUserPresenterTests: XCTestCase
     
     // MARK: Tests
     
-    func testSomething()
-    {
-        // Given
+    func testVCIsCalledAfterUserIsSaved(){
         
-        // When
+        //Given
+        let spy = ViewControllerSpy()
+        sut.viewController = spy
         
-        // Then
+        
+        //When
+        let response = CreateUser.User.Response(success: "User was saved succesfully")
+        sut.presentCreateUser(response: response)
+        
+        //Then 
+        XCTAssertTrue(spy.viewControllerWasCalled, "View controller has to be called")
+    }
+}
+
+class ViewControllerSpy: CreateUserDisplayLogic{
+    
+    var viewControllerWasCalled = false
+    
+    func displayCreateUserResponse(viewModel: CreateUser.User.ViewModel) {
+        viewControllerWasCalled = true
     }
 }

@@ -37,5 +37,8 @@ enum CreateUser
         struct Response {
             var success:String
         }
+        struct ViewModel {
+            var success:String
+        }
     }
 }

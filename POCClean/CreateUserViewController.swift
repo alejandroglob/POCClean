@@ -14,7 +14,8 @@ import UIKit
 
 protocol CreateUserDisplayLogic: class
 {
-    func displaySomething(viewModel: CreateUser.Something.ViewModel)
+    
+    func displayCreateUserResponse(viewModel: CreateUser.User.ViewModel)
 }
 
 class CreateUserViewController: UIViewController, CreateUserDisplayLogic
@@ -88,10 +89,16 @@ class CreateUserViewController: UIViewController, CreateUserDisplayLogic
 //        interactor?.doSomething(request: request)
 //    }
     
-    func displaySomething(viewModel: CreateUser.Something.ViewModel)
-    {
-        //nameTextField.text = viewModel.name
+//    func displaySomething(viewModel: CreateUser.Something.ViewModel)
+//    {
+//        //nameTextField.text = viewModel.name
+//    }
+    
+    func displayCreateUserResponse(viewModel: CreateUser.User.ViewModel) {
+        
     }
+    
+    
     @IBAction func didPressSave(_ sender: Any) {
         let request = CreateUser.User.Request(firstName: txtFirstName.text!, lastName: txtLastName.text!)
         interactor?.saveUser(request: request)

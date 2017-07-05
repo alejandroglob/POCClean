@@ -33,7 +33,8 @@ class CreateUserPresenter: CreateUserPresentationLogic
 //    }
     
     func presentCreateUser(response: CreateUser.User.Response) {
-        
+        let viewModel = CreateUser.User.ViewModel(success: response.success)
+        viewController?.displayCreateUserResponse(viewModel: viewModel)
     }
     
 }
