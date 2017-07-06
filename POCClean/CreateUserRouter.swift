@@ -14,47 +14,60 @@ import UIKit
 
 @objc protocol CreateUserRoutingLogic
 {
-  //func routeToSomewhere(segue: UIStoryboardSegue?)
+    func routeToSomewhere(segue: UIStoryboardSegue?)
 }
 
 protocol CreateUserDataPassing
 {
-  var dataStore: CreateUserDataStore? { get }
+    var dataStore: CreateUserDataStore? { get }
 }
 
 class CreateUserRouter: NSObject, CreateUserRoutingLogic, CreateUserDataPassing
 {
-  weak var viewController: CreateUserViewController?
-  var dataStore: CreateUserDataStore?
-  
-  // MARK: Routing
-  
-  //func routeToSomewhere(segue: UIStoryboardSegue?)
-  //{
-  //  if let segue = segue {
-  //    let destinationVC = segue.destination as! SomewhereViewController
-  //    var destinationDS = destinationVC.router!.dataStore!
-  //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-  //  } else {
-  //    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-  //    let destinationVC = storyboard.instantiateViewController(withIdentifier: "SomewhereViewController") as! SomewhereViewController
-  //    var destinationDS = destinationVC.router!.dataStore!
-  //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-  //    navigateToSomewhere(source: viewController!, destination: destinationVC)
-  //  }
-  //}
-
-  // MARK: Navigation
-  
-  //func navigateToSomewhere(source: CreateUserViewController, destination: SomewhereViewController)
-  //{
-  //  source.show(destination, sender: nil)
-  //}
-  
-  // MARK: Passing data
-  
-  //func passDataToSomewhere(source: CreateUserDataStore, destination: inout SomewhereDataStore)
-  //{
-  //  destination.name = source.name
-  //}
+    weak var viewController: CreateUserViewController?
+    var dataStore: CreateUserDataStore?
+    
+    // MARK: Routing
+    
+    func routeToSomewhere(segue: UIStoryboardSegue?)
+    {
+//        if let segue = segue {
+//                  let destinationVC = segue.destination as! SomewhereViewController
+//                  var destinationDS = destinationVC.router!.dataStore!
+//                  passDataToSomewhere(source: dataStore!, destination: &destinationDS)
+//        }
+//        else {
+//                  let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//                  let destinationVC = storyboard.instantiateViewController(withIdentifier: "SomewhereViewController") as! SomewhereViewController
+//                  var destinationDS = destinationVC.router!.dataStore!
+//                  passDataToSomewhere(source: dataStore!, destination: &destinationDS)
+//                  navigateToSomewhere(source: viewController!, destination: destinationVC)
+//        }
+    }
+    
+    func routeToVC(segue: UIStoryboardSegue?){
+        if let segue = segue{
+            let destinationVC = segue.destination as! ListUsersViewController
+            var destinationDS = destinationVC.router!.dataStore!
+            
+        }
+    }
+    
+    // MARK: Navigation
+    
+    //func navigateToSomewhere(source: CreateUserViewController, destination: SomewhereViewController)
+    //{
+    //  source.show(destination, sender: nil)
+    //}
+    
+    // MARK: Passing data
+    
+    //  func passDataToSomewhere(source: CreateUserDataStore, destination: inout UIViewController)
+    //  {
+    //    destination.name = source.name
+    //  }
+    
+    func passDataToListUsersViewController(source: CreateUserDataStore, destination:  ListUsersViewController){
+        
+    }
 }

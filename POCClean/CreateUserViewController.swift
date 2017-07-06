@@ -95,6 +95,7 @@ class CreateUserViewController: UIViewController, CreateUserDisplayLogic
 //    }
     
     func displayCreateUserResponse(viewModel: CreateUser.User.ViewModel) {
+        performSegue(withIdentifier: "ListUsersViewController", sender: nil)
         
     }
     
